@@ -12,7 +12,7 @@ size = [300, 500]
 screen = pygame.display.set_mode(size)
 pause = 1
 step_pause = 1
-
+master = "this"
 # Set title of screen
 pygame.display.set_caption("cube")
 
