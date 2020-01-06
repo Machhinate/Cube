@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89f09e-3025-42ac-b8e2-f5958d12fe4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GA_Results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA_Results.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cube.py" beforeDir="false" afterPath="$PROJECT_DIR$/cube.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +105,14 @@
       <option name="presentableId" value="Default" />
       <updated>1575859353930</updated>
     </task>
+    <task id="LOCAL-00001" summary="works again">
+      <created>1578273270532</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578273270532</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,45 +120,55 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="works again" />
+    <option name="LAST_COMMIT_MESSAGE" value="works again" />
   </component>
   <component name="WindowStateProjectService">
     <state x="570" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576033732575">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="570" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1576033732575" />
-    <state width="1658" height="248" key="GridCell.Tab.0.bottom" timestamp="1578273014359">
+    <state x="494" y="98" key="CommitChangelistDialog2" timestamp="1578273269448">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1658" height="248" key="GridCell.Tab.0.bottom/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578273014359" />
-    <state width="1658" height="248" key="GridCell.Tab.0.center" timestamp="1578273014359">
+    <state x="494" y="98" key="CommitChangelistDialog2/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578273269448" />
+    <state width="1658" height="248" key="GridCell.Tab.0.bottom" timestamp="1578280423027">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1658" height="248" key="GridCell.Tab.0.center/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578273014359" />
-    <state width="1658" height="248" key="GridCell.Tab.0.left" timestamp="1578273014359">
+    <state width="1658" height="248" key="GridCell.Tab.0.bottom/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578280423027" />
+    <state width="1658" height="248" key="GridCell.Tab.0.center" timestamp="1578280423027">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1658" height="248" key="GridCell.Tab.0.left/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578273014359" />
-    <state width="1658" height="248" key="GridCell.Tab.0.right" timestamp="1578273014359">
+    <state width="1658" height="248" key="GridCell.Tab.0.center/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578280423027" />
+    <state width="1658" height="248" key="GridCell.Tab.0.left" timestamp="1578280423027">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1658" height="248" key="GridCell.Tab.0.right/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578273014359" />
+    <state width="1658" height="248" key="GridCell.Tab.0.left/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578280423027" />
+    <state width="1658" height="248" key="GridCell.Tab.0.right" timestamp="1578280423027">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1658" height="248" key="GridCell.Tab.0.right/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578280423027" />
     <state x="341" y="136" key="SettingsEditor" timestamp="1575932278868">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="341" y="136" key="SettingsEditor/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1575932278868" />
-    <state x="535" y="327" key="com.intellij.ide.util.TipDialog" timestamp="1578271805192">
+    <state x="535" y="327" key="com.intellij.ide.util.TipDialog" timestamp="1578273495799">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="535" y="327" key="com.intellij.ide.util.TipDialog/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578271805192" />
-    <state x="649" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578273245953">
+    <state x="535" y="327" key="com.intellij.ide.util.TipDialog/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578273495799" />
+    <state x="649" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578280882572">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="649" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578273245953" />
+    <state x="649" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578280882572" />
     <state x="503" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1576022412385">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
