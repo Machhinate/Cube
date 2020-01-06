@@ -1,8 +1,6 @@
 import pygame
 import cubeclass
 import random
-from random import random as rnd
-from random import gauss, randrange
 
 
 
@@ -12,8 +10,8 @@ pygame.init()
 # Set the height and width of the screen
 size = [300, 500]
 screen = pygame.display.set_mode(size)
-pause = 10
-step_pause = 1000
+pause = 1
+step_pause = 1
 
 # Set title of screen
 pygame.display.set_caption("cube")
@@ -1184,6 +1182,7 @@ def scramble():
 
 def rotate_white(): #white
     # face corners
+
     hold = the_cube.grid[0][3].status
     the_cube.grid[0][3].status = the_cube.grid[2][3].status
     the_cube.grid[2][3].status = the_cube.grid[2][5].status
@@ -1219,6 +1218,45 @@ def rotate_white(): #white
     pygame.display.flip()
     pygame.event.pump()
     pass
+
+
+def rotate_uwhite(): #white
+    # face corners
+    """hold = the_cube.grid[0][3].status
+    the_cube.grid[0][3].status = the_cube.grid[2][3].status
+    the_cube.grid[2][3].status = the_cube.grid[2][5].status
+    the_cube.grid[2][5].status = the_cube.grid[0][5].status
+    the_cube.grid[0][5].status = hold
+    # face edges
+    hold = the_cube.grid[0][4].status
+    the_cube.grid[0][4].status = the_cube.grid[1][3].status
+    the_cube.grid[1][3].status = the_cube.grid[2][4].status
+    the_cube.grid[2][4].status = the_cube.grid[1][5].status
+    the_cube.grid[1][5].status = hold
+    # inside corners d
+    hold = the_cube.grid[11][3].status
+    the_cube.grid[11][3].status = the_cube.grid[3][2].status
+    the_cube.grid[3][2].status = the_cube.grid[3][5].status
+    the_cube.grid[3][5].status = the_cube.grid[3][8].status
+    the_cube.grid[3][8].status = hold
+    # outside corners d
+    hold = the_cube.grid[11][5].status
+    the_cube.grid[11][5].status = the_cube.grid[3][0].status
+    the_cube.grid[3][0].status = the_cube.grid[3][3].status
+    the_cube.grid[3][3].status = the_cube.grid[3][6].status
+    the_cube.grid[3][6].status = hold
+    # outside edges d
+    hold = the_cube.grid[11][4].status
+    the_cube.grid[11][4].status = the_cube.grid[3][1].status
+    the_cube.grid[3][1].status = the_cube.grid[3][4].status
+    the_cube.grid[3][4].status = the_cube.grid[3][7].status
+    the_cube.grid[3][7].status = hold
+
+    pygame.time.delay(pause)
+    the_cube.display_cube(screen)
+    pygame.display.flip()
+    pygame.event.pump()
+    pass"""
 
 
 def rotate_yellow():  # yellow

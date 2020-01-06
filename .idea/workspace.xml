@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c89f09e-3025-42ac-b8e2-f5958d12fe4e" name="Default Changelist" comment="" />
+    <list default="true" id="4c89f09e-3025-42ac-b8e2-f5958d12fe4e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA_Results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GA_Results.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cube.py" beforeDir="false" afterPath="$PROJECT_DIR$/cube.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,16 +19,22 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
   <component name="ProjectId" id="1Uj9tixhcJUKhC3S3VpqkOJFsS6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.genetics">
+  <component name="RunManager" selected="Python.cube">
     <configuration name="cube" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="flatcube" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -68,8 +79,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.genetics" />
         <item itemvalue="Python.cube" />
+        <item itemvalue="Python.genetics" />
       </list>
     </recent_temporary>
   </component>
@@ -98,27 +109,38 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="570" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576033732575">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="570" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1576033732575" />
-    <state width="1658" height="248" key="GridCell.Tab.0.bottom" timestamp="1576034165228">
+    <state width="1658" height="248" key="GridCell.Tab.0.bottom" timestamp="1578273014359">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1658" height="248" key="GridCell.Tab.0.bottom/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1576034165228" />
-    <state width="1658" height="248" key="GridCell.Tab.0.center" timestamp="1576034165228">
+    <state width="1658" height="248" key="GridCell.Tab.0.bottom/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578273014359" />
+    <state width="1658" height="248" key="GridCell.Tab.0.center" timestamp="1578273014359">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1658" height="248" key="GridCell.Tab.0.center/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1576034165228" />
-    <state width="1658" height="248" key="GridCell.Tab.0.left" timestamp="1576034165228">
+    <state width="1658" height="248" key="GridCell.Tab.0.center/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578273014359" />
+    <state width="1658" height="248" key="GridCell.Tab.0.left" timestamp="1578273014359">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1658" height="248" key="GridCell.Tab.0.left/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1576034165228" />
-    <state width="1658" height="248" key="GridCell.Tab.0.right" timestamp="1576034165228">
+    <state width="1658" height="248" key="GridCell.Tab.0.left/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578273014359" />
+    <state width="1658" height="248" key="GridCell.Tab.0.right" timestamp="1578273014359">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1658" height="248" key="GridCell.Tab.0.right/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1576034165228" />
+    <state width="1658" height="248" key="GridCell.Tab.0.right/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578273014359" />
     <state x="341" y="136" key="SettingsEditor" timestamp="1575932278868">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -127,6 +149,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="535" y="327" key="com.intellij.ide.util.TipDialog/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578271805192" />
+    <state x="649" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578273245953">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="649" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.0.1280.984/0.0.1680.1010@0.0.1680.1010" timestamp="1578273245953" />
     <state x="503" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1576022412385">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
