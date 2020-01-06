@@ -1349,26 +1349,26 @@ def rotate_red():  # red
 
 
 def rotate_ured():
-    status = [the_cube.grid[3][3].status, the_cube.grid[3][4].status, the_cube.grid[3][5].status,
-              the_cube.grid[4][5].status, the_cube.grid[5][5].status, the_cube.grid[5][4].status,
-              the_cube.grid[5][3].status, the_cube.grid[4][3].status]
+    status = [the_cube.grid[3][0].status, the_cube.grid[3][1].status, the_cube.grid[3][2].status,
+              the_cube.grid[4][2].status, the_cube.grid[5][2].status, the_cube.grid[5][1].status,
+              the_cube.grid[5][0].status, the_cube.grid[4][0].status]
     status = status[2:] + status[0:2]
 
-    the_cube.grid[3][3].status, the_cube.grid[3][4].status, the_cube.grid[3][5].status, the_cube.grid[4][5].status, \
-    the_cube.grid[5][5].status, the_cube.grid[5][4].status, the_cube.grid[5][3].status, the_cube.grid[4][3].status \
-        = status
+    the_cube.grid[3][0].status, the_cube.grid[3][1].status, the_cube.grid[3][2].status, \
+    the_cube.grid[4][2].status, the_cube.grid[5][2].status, the_cube.grid[5][1].status, \
+    the_cube.grid[5][0].status, the_cube.grid[4][0].status = status
 
-    status = [the_cube.grid[2][5].status, the_cube.grid[2][4].status, the_cube.grid[2][3].status,
-              the_cube.grid[5][6].status, the_cube.grid[4][6].status, the_cube.grid[3][6].status,
-              the_cube.grid[6][3].status, the_cube.grid[6][4].status, the_cube.grid[6][5].status,
-              the_cube.grid[3][2].status, the_cube.grid[4][2].status, the_cube.grid[5][2].status]
+    status = [the_cube.grid[2][3].status, the_cube.grid[1][3].status, the_cube.grid[0][3].status,
+              the_cube.grid[5][3].status, the_cube.grid[4][3].status, the_cube.grid[3][3].status,
+              the_cube.grid[8][3].status, the_cube.grid[7][3].status, the_cube.grid[6][3].status,
+              the_cube.grid[11][3].status, the_cube.grid[10][3].status, the_cube.grid[9][3].status]
 
     status = status[3:] + status[0:3]
 
-    the_cube.grid[2][5].status, the_cube.grid[2][4].status, the_cube.grid[2][3].status, \
-    the_cube.grid[5][6].status, the_cube.grid[4][6].status, the_cube.grid[3][6].status, \
-    the_cube.grid[6][3].status, the_cube.grid[6][4].status, the_cube.grid[6][5].status, \
-    the_cube.grid[3][2].status, the_cube.grid[4][2].status, the_cube.grid[5][2].status = status
+    the_cube.grid[2][3].status, the_cube.grid[1][3].status, the_cube.grid[0][3].status, \
+    the_cube.grid[5][3].status, the_cube.grid[4][3].status, the_cube.grid[3][3].status, \
+    the_cube.grid[8][3].status, the_cube.grid[7][3].status, the_cube.grid[6][3].status, \
+    the_cube.grid[11][3].status, the_cube.grid[10][3].status, the_cube.grid[9][3].status = status
 
     cube_updater()
     pass
@@ -1406,10 +1406,33 @@ def rotate_orange():  # orange
     the_cube.grid[7][5].status = the_cube.grid[10][5].status
     the_cube.grid[10][5].status = hold
 
-    pygame.time.delay(pause)
-    the_cube.display_cube(screen)
-    pygame.display.flip()
-    pygame.event.pump()
+    cube_updater()
+    pass
+
+
+def rotate_uorange():
+    status = [the_cube.grid[3][0].status, the_cube.grid[3][1].status, the_cube.grid[3][2].status,
+              the_cube.grid[4][2].status, the_cube.grid[5][2].status, the_cube.grid[5][1].status,
+              the_cube.grid[5][0].status, the_cube.grid[4][0].status]
+    status = status[2:] + status[0:2]
+
+    the_cube.grid[3][0].status, the_cube.grid[3][1].status, the_cube.grid[3][2].status, \
+    the_cube.grid[4][2].status, the_cube.grid[5][2].status, the_cube.grid[5][1].status, \
+    the_cube.grid[5][0].status, the_cube.grid[4][0].status = status
+
+    status = [the_cube.grid[2][3].status, the_cube.grid[1][3].status, the_cube.grid[0][3].status,
+              the_cube.grid[5][3].status, the_cube.grid[4][3].status, the_cube.grid[3][3].status,
+              the_cube.grid[8][3].status, the_cube.grid[7][3].status, the_cube.grid[6][3].status,
+              the_cube.grid[11][3].status, the_cube.grid[10][3].status, the_cube.grid[9][3].status]
+
+    status = status[3:] + status[0:3]
+
+    the_cube.grid[2][3].status, the_cube.grid[1][3].status, the_cube.grid[0][3].status, \
+    the_cube.grid[5][3].status, the_cube.grid[4][3].status, the_cube.grid[3][3].status, \
+    the_cube.grid[8][3].status, the_cube.grid[7][3].status, the_cube.grid[6][3].status, \
+    the_cube.grid[11][3].status, the_cube.grid[10][3].status, the_cube.grid[9][3].status = status
+
+    cube_updater()
     pass
 
 
@@ -1445,10 +1468,7 @@ def rotate_blue():  # blue
     the_cube.grid[6][4].status = the_cube.grid[4][6].status
     the_cube.grid[4][6].status = hold
 
-    pygame.time.delay(pause)
-    the_cube.display_cube(screen)
-    pygame.display.flip()
-    pygame.event.pump()
+    cube_updater()
     pass
 
 def rotate_ublue():
@@ -1473,10 +1493,7 @@ def rotate_ublue():
     the_cube.grid[6][3].status, the_cube.grid[6][4].status, the_cube.grid[6][5].status, \
     the_cube.grid[3][2].status, the_cube.grid[4][2].status, the_cube.grid[5][2].status = status
 
-    pygame.time.delay(pause)
-    the_cube.display_cube(screen)
-    pygame.display.flip()
-    pygame.event.pump()
+    cube_updater()
     pass
 
 
@@ -1512,10 +1529,7 @@ def rotate_green():  # green
     the_cube.grid[0][4].status = the_cube.grid[4][8].status
     the_cube.grid[4][8].status = hold
 
-    pygame.time.delay(pause)
-    the_cube.display_cube(screen)
-    pygame.display.flip()
-    pygame.event.pump()
+    cube_updater()
     pass
 
 
@@ -1541,10 +1555,7 @@ def rotate_ugreen():
     the_cube.grid[0][3].status, the_cube.grid[0][4].status, the_cube.grid[0][5].status, \
     the_cube.grid[5][0].status, the_cube.grid[4][0].status, the_cube.grid[3][0].status = status
 
-    pygame.time.delay(pause)
-    the_cube.display_cube(screen)
-    pygame.display.flip()
-    pygame.event.pump()
+    cube_updater()
     pass
 
 
@@ -1568,7 +1579,7 @@ while not done:
             if event.key == pygame.K_d:
                 rotate_uyellow()
             if event.key == pygame.K_l:
-                rotate_red()
+                rotate_ured()
             if event.key == pygame.K_r:
                 rotate_orange()
             if event.key == pygame.K_f:
