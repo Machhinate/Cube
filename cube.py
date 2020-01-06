@@ -1,6 +1,7 @@
 import pygame
 import cubeclass
 import random
+import time
 
 
 
@@ -10,8 +11,8 @@ pygame.init()
 # Set the height and width of the screen
 size = [300, 500]
 screen = pygame.display.set_mode(size)
-pause = 1
-step_pause = 1
+pause = 0
+step_pause = 0
 
 # Set title of screen
 pygame.display.set_caption("cube")
@@ -59,9 +60,7 @@ def solve():
             if the_cube.grid[0][4].status == 'b':
                 rotate_white()
                 rotate_blue()
-                rotate_orange()
-                rotate_orange()
-                rotate_orange()
+                rotate_uorange()
 
             if the_cube.grid[1][3].status == 'b':
                 rotate_white()
@@ -71,21 +70,15 @@ def solve():
 
             if the_cube.grid[1][5].status == 'b':
                 rotate_blue()
-                rotate_orange()
-                rotate_orange()
-                rotate_orange()
+                rotate_uorange()
 
             if the_cube.grid[2][4].status == 'b':
-                rotate_white()
-                rotate_white()
-                rotate_white()
+                rotate_uwhite()
                 rotate_blue()
                 rotate_orange()
 
             if the_cube.grid[3][1].status == 'b':
-                rotate_white()
-                rotate_white()
-                rotate_white()
+                rotate_uwhite()
                 rotate_blue()
 
             if the_cube.grid[3][7].status == 'b':
@@ -93,27 +86,17 @@ def solve():
                 rotate_blue()
 
             if the_cube.grid[4][0].status == 'b':
-                rotate_blue()
-                rotate_blue()
-                rotate_blue()
+                rotate_ublue()
                 rotate_red()
                 rotate_blue()
-                rotate_white()
-                rotate_white()
-                rotate_white()
+                rotate_uwhite()
                 rotate_blue()
 
             if the_cube.grid[4][2].status == 'b':
+                rotate_ublue()
+                rotate_ured()
                 rotate_blue()
-                rotate_blue()
-                rotate_blue()
-                rotate_red()
-                rotate_red()
-                rotate_red()
-                rotate_blue()
-                rotate_white()
-                rotate_white()
-                rotate_white()
+                rotate_uwhite()
                 rotate_blue()
 
             if the_cube.grid[4][6].status == 'b':
@@ -125,51 +108,33 @@ def solve():
                 rotate_blue()
                 rotate_orange()
                 rotate_blue()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_blue()
-                rotate_blue()
-                rotate_blue()
+                rotate_uyellow()
+                rotate_ublue()
 
             if the_cube.grid[5][1].status == 'b':
                 rotate_blue()
                 rotate_blue()
                 rotate_yellow()
-                rotate_blue()
-                rotate_blue()
-                rotate_blue()
+                rotate_ublue()
 
             if the_cube.grid[5][7].status == 'b':
                 rotate_blue()
                 rotate_blue()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_blue()
-                rotate_blue()
-                rotate_blue()
+                rotate_uyellow()
+                rotate_ublue()
 
             if the_cube.grid[6][4].status == 'b':
                 rotate_blue()
                 rotate_blue()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_yellow()
+                rotate_uyellow()
                 rotate_blue()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ured()
                 rotate_blue()
                 rotate_blue()
 
             if the_cube.grid[7][3].status == 'b':
-                rotate_blue()
-                rotate_blue()
-                rotate_blue()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ublue()
+                rotate_ured()
                 rotate_blue()
                 rotate_blue()
 
@@ -179,9 +144,7 @@ def solve():
                 rotate_yellow()
                 rotate_yellow()
                 rotate_blue()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ured()
                 rotate_blue()
                 rotate_blue()
 
@@ -190,9 +153,7 @@ def solve():
                 rotate_blue()
                 rotate_yellow()
                 rotate_blue()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ured()
                 rotate_blue()
                 rotate_blue()
 
@@ -204,9 +165,7 @@ def solve():
                 rotate_blue()
 
             if the_cube.grid[10][3].status == 'b':
-                rotate_green()
-                rotate_green()
-                rotate_green()
+                rotate_ugreen()
                 rotate_white()
                 rotate_white()
                 rotate_blue()
@@ -235,17 +194,13 @@ def solve():
                     rotate_green()
                     rotate_red()
                     rotate_red()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ugreen()
                     rotate_white()
                     rotate_white()
                 elif the_cube.grid[2][4].status == 'o':
                     rotate_white()
                     rotate_white()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ugreen()
                     rotate_orange()
                     rotate_orange()
                     rotate_green()
@@ -267,9 +222,7 @@ def solve():
                 if the_cube.grid[4][2].status == 'w':
                     rotate_red()
                     rotate_red()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ugreen()
                     rotate_white()
                     rotate_white()
                     rotate_green()
@@ -292,9 +245,7 @@ def solve():
                     rotate_green()
                     rotate_yellow()
                     rotate_yellow()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ugreen()
                     rotate_red()
                     rotate_red()
 
@@ -316,17 +267,13 @@ def solve():
                     rotate_green()
                     rotate_orange()
                     rotate_orange()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ugreen()
                     rotate_yellow()
                     rotate_yellow()
                 else:
                     rotate_yellow()
                     rotate_yellow()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ugreen()
                     rotate_red()
                     rotate_red()
                     rotate_green()
@@ -340,17 +287,13 @@ def solve():
                     rotate_green()
                     rotate_white()
                     rotate_white()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ugreen()
                     rotate_orange()
                     rotate_orange()
                 elif the_cube.grid[4][6].status == 'y':
                     rotate_orange()
                     rotate_orange()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ugreen()
                     rotate_yellow()
                     rotate_yellow()
                     rotate_green()
@@ -382,78 +325,50 @@ def solve():
                 if the_cube.grid[3][0].status == 'r':
                     rotate_white()
                     rotate_green()
-                    rotate_white()
-                    rotate_white()
-                    rotate_white()
+                    rotate_uwhite()
 
                 elif the_cube.grid[3][0].status == 'y':
                     rotate_green()
                     rotate_red()
                     rotate_green()
-                    rotate_red()
-                    rotate_red()
-                    rotate_red()
+                    rotate_ured()
 
                 elif the_cube.grid[3][0].status == 'o':
                     rotate_green()
                     rotate_green()
                     rotate_yellow()
                     rotate_green()
-                    rotate_yellow()
-                    rotate_yellow()
-                    rotate_yellow()
+                    rotate_uyellow()
 
                 elif the_cube.grid[3][0].status == 'w':
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ugreen()
                     rotate_orange()
                     rotate_green()
-                    rotate_orange()
-                    rotate_orange()
-                    rotate_orange()
+                    rotate_uorange()
 
             if the_cube.grid[3][0].status == 'b':
                 if the_cube.grid[11][3].status == 'r':
-                    rotate_red()
-                    rotate_red()
-                    rotate_red()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ured()
+                    rotate_ugreen()
                     rotate_red()
 
                 elif the_cube.grid[11][3].status == 'y':
                     rotate_green()
-                    rotate_yellow()
-                    rotate_yellow()
-                    rotate_yellow()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_uyellow()
+                    rotate_ugreen()
                     rotate_yellow()
 
                 elif the_cube.grid[11][3].status == 'o':
                     rotate_green()
                     rotate_green()
-                    rotate_orange()
-                    rotate_orange()
-                    rotate_orange()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_uorange()
+                    rotate_ugreen()
                     rotate_orange()
 
                 elif the_cube.grid[11][3].status == 'w':
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
-                    rotate_white()
-                    rotate_white()
-                    rotate_white()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ugreen()
+                    rotate_uwhite()
+                    rotate_ugreen()
                     rotate_white()
 
             if the_cube.grid[11][3].status == 'b':
@@ -461,34 +376,22 @@ def solve():
                     rotate_white()
                     rotate_green()
                     rotate_green()
-                    rotate_white()
-                    rotate_white()
-                    rotate_white()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_uwhite()
+                    rotate_ugreen()
                     rotate_white()
                     rotate_green()
-                    rotate_white()
-                    rotate_white()
-                    rotate_white()
+                    rotate_uwhite()
 
                 if the_cube.grid[0][3].status == 'y':
                     rotate_green()
                     rotate_red()
                     rotate_green()
                     rotate_green()
-                    rotate_red()
-                    rotate_red()
-                    rotate_red()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ured()
+                    rotate_ugreen()
                     rotate_red()
                     rotate_green()
-                    rotate_red()
-                    rotate_red()
-                    rotate_red()
+                    rotate_ured()
 
                 if the_cube.grid[0][3].status == 'o':
                     rotate_green()
@@ -496,36 +399,22 @@ def solve():
                     rotate_yellow()
                     rotate_green()
                     rotate_green()
-                    rotate_yellow()
-                    rotate_yellow()
-                    rotate_yellow()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_uyellow()
+                    rotate_ugreen()
                     rotate_yellow()
                     rotate_green()
-                    rotate_yellow()
-                    rotate_yellow()
-                    rotate_yellow()
+                    rotate_uyellow()
 
                 if the_cube.grid[0][3].status == 'w':
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_ugreen()
                     rotate_orange()
                     rotate_green()
                     rotate_green()
-                    rotate_orange()
-                    rotate_orange()
-                    rotate_orange()
-                    rotate_green()
-                    rotate_green()
-                    rotate_green()
+                    rotate_uorange()
+                    rotate_ugreen()
                     rotate_orange()
                     rotate_green()
-                    rotate_orange()
-                    rotate_orange()
-                    rotate_orange()
+                    rotate_uorange()
 
             if (the_cube.grid[0][5].status == 'b' or the_cube.grid[11][5].status == 'b' or
                     the_cube.grid[3][8].status == 'b'):
@@ -540,45 +429,35 @@ def solve():
 
             if (the_cube.grid[5][0].status == 'b' or the_cube.grid[8][3].status == 'b' or
                     the_cube.grid[9][3].status == 'b'):
-                rotate_green()
-                rotate_green()
-                rotate_green()
+                rotate_ugreen()
                 continue
 
             if ((the_cube.grid[3][3].status == 'b' and the_cube.grid[3][2].status != 'r') or
                     the_cube.grid[2][3].status == 'b' or the_cube.grid[3][2].status == 'b'):
                 rotate_white()
                 rotate_green()
-                rotate_white()
-                rotate_white()
-                rotate_white()
+                rotate_uwhite()
                 continue
 
             if ((the_cube.grid[3][5].status == 'b' and the_cube.grid[2][5].status != 'w') or
                     the_cube.grid[2][5].status == 'b' or the_cube.grid[3][6].status == 'b'):
                 rotate_orange()
                 rotate_green()
-                rotate_orange()
-                rotate_orange()
-                rotate_orange()
+                rotate_uorange()
                 continue
 
             if ((the_cube.grid[5][3].status == 'b' and the_cube.grid[6][3].status != 'y') or
                     the_cube.grid[6][3].status == 'b' or the_cube.grid[5][2].status == 'b'):
                 rotate_red()
                 rotate_green()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ured()
                 continue
 
             if ((the_cube.grid[5][5].status == 'b' and the_cube.grid[5][6].status != 'o') or
                     the_cube.grid[5][6].status == 'b' or the_cube.grid[6][5].status == 'b'):
                 rotate_yellow()
                 rotate_green()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_yellow()
+                rotate_uyellow()
                 continue
 
             if (the_cube.grid[3][3].status == 'b' and the_cube.grid[3][5].status == 'b' and
@@ -592,21 +471,13 @@ def solve():
             if the_cube.grid[11][4].status != 'g' and the_cube.grid[0][4].status != 'g':
                 if the_cube.grid[11][4].status == 'r':
                     if the_cube.grid[0][4].status == 'y':
-                        rotate_green()
-                        rotate_green()
-                        rotate_green()
+                        rotate_ugreen()
                         rotate_red()
+                        rotate_ugreen()
+                        rotate_ured()
                         rotate_green()
                         rotate_green()
-                        rotate_green()
-                        rotate_red()
-                        rotate_red()
-                        rotate_red()
-                        rotate_green()
-                        rotate_green()
-                        rotate_yellow()
-                        rotate_yellow()
-                        rotate_yellow()
+                        rotate_uyellow()
                         rotate_green()
                         rotate_green()
                         rotate_yellow()
@@ -614,54 +485,34 @@ def solve():
                         print('red yellow')
 
                     if the_cube.grid[0][4].status == 'w':
-                        rotate_green()
-                        rotate_green()
-                        rotate_green()
-                        rotate_red()
-                        rotate_red()
-                        rotate_red()
+                        rotate_ugreen()
+                        rotate_ured()
                         rotate_green()
                         rotate_red()
                         rotate_green()
                         rotate_white()
-                        rotate_green()
-                        rotate_green()
-                        rotate_green()
-                        rotate_white()
-                        rotate_white()
-                        rotate_white()
+                        rotate_ugreen()
+                        rotate_uwhite()
                         print('red white')
 
                 if the_cube.grid[11][4].status == 'y':
                     if the_cube.grid[0][4].status == 'r':
-                        rotate_yellow()
-                        rotate_yellow()
-                        rotate_yellow()
+                        rotate_uyellow()
                         rotate_green()
                         rotate_yellow()
                         rotate_green()
                         rotate_red()
-                        rotate_green()
-                        rotate_green()
-                        rotate_green()
-                        rotate_red()
-                        rotate_red()
-                        rotate_red()
+                        rotate_ugreen()
+                        rotate_ured()
                         print('yellow red')
 
                     if the_cube.grid[0][4].status == 'o':
                         rotate_yellow()
+                        rotate_ugreen()
+                        rotate_uyellow()
                         rotate_green()
                         rotate_green()
-                        rotate_green()
-                        rotate_yellow()
-                        rotate_yellow()
-                        rotate_yellow()
-                        rotate_green()
-                        rotate_green()
-                        rotate_orange()
-                        rotate_orange()
-                        rotate_orange()
+                        rotate_uorange()
                         rotate_green()
                         rotate_green()
                         rotate_orange()
@@ -672,17 +523,11 @@ def solve():
                     if the_cube.grid[0][4].status == 'w':
                         rotate_green()
                         rotate_orange()
+                        rotate_ugreen()
+                        rotate_uorange()
                         rotate_green()
                         rotate_green()
-                        rotate_green()
-                        rotate_orange()
-                        rotate_orange()
-                        rotate_orange()
-                        rotate_green()
-                        rotate_green()
-                        rotate_white()
-                        rotate_white()
-                        rotate_white()
+                        rotate_uwhite()
                         rotate_green()
                         rotate_green()
                         rotate_white()
@@ -690,9 +535,7 @@ def solve():
 
                     if the_cube.grid[0][4].status == 'y':
                         rotate_green()
-                        rotate_orange()
-                        rotate_orange()
-                        rotate_orange()
+                        rotate_uorange()
                         rotate_green()
                         rotate_orange()
                         rotate_green()
@@ -700,18 +543,14 @@ def solve():
                         rotate_yellow()
                         rotate_green()
                         rotate_green()
-                        rotate_yellow()
-                        rotate_yellow()
-                        rotate_yellow()
+                        rotate_uyellow()
                         print('orange yellow')
 
                 if the_cube.grid[11][4].status == 'w':
                     if the_cube.grid[0][4].status == 'o':
                         rotate_green()
                         rotate_green()
-                        rotate_white()
-                        rotate_white()
-                        rotate_white()
+                        rotate_uwhite()
                         rotate_green()
                         rotate_white()
                         rotate_green()
@@ -719,26 +558,18 @@ def solve():
                         rotate_orange()
                         rotate_green()
                         rotate_green()
-                        rotate_orange()
-                        rotate_orange()
-                        rotate_orange()
+                        rotate_uorange()
                         print('white orange')
 
                     if the_cube.grid[0][4].status == 'r':
                         rotate_green()
                         rotate_green()
                         rotate_white()
+                        rotate_ugreen()
+                        rotate_uwhite()
                         rotate_green()
                         rotate_green()
-                        rotate_green()
-                        rotate_white()
-                        rotate_white()
-                        rotate_white()
-                        rotate_green()
-                        rotate_green()
-                        rotate_red()
-                        rotate_red()
-                        rotate_red()
+                        rotate_ured()
                         rotate_green()
                         rotate_green()
                         rotate_red()
@@ -754,80 +585,46 @@ def solve():
                 continue
 
             if the_cube.grid[10][3].status != 'g' and the_cube.grid[4][0].status != 'g':
-                rotate_green()
-                rotate_green()
-                rotate_green()
+                rotate_ugreen()
                 continue
 
             if the_cube.grid[3][1].status != 'r' or the_cube.grid[1][3].status != 'w':
                 rotate_white()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_white()
-                rotate_white()
-                rotate_white()
+                rotate_ugreen()
+                rotate_uwhite()
                 rotate_red()
-                rotate_white()
-                rotate_white()
-                rotate_white()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_uwhite()
+                rotate_ured()
                 rotate_white()
                 print('3,1;1,3')
                 continue
             if the_cube.grid[5][7].status != 'o' or the_cube.grid[7][5].status != 'y':
                 rotate_yellow()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_yellow()
+                rotate_ugreen()
+                rotate_uyellow()
                 rotate_orange()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_orange()
-                rotate_orange()
-                rotate_orange()
+                rotate_uyellow()
+                rotate_uorange()
                 rotate_yellow()
                 print('5,7;7,5')
                 continue
             if the_cube.grid[7][3].status != 'y' or the_cube.grid[5][1].status != 'r':
                 rotate_red()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ugreen()
+                rotate_ured()
                 rotate_yellow()
-                rotate_red()
-                rotate_red()
-                rotate_red()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_yellow()
+                rotate_ured()
+                rotate_uyellow()
                 rotate_red()
                 print('7,3;5,1')
                 continue
             if the_cube.grid[3][7].status != 'o' or the_cube.grid[1][5].status != 'w':
                 rotate_orange()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_orange()
-                rotate_orange()
-                rotate_orange()
+                rotate_ugreen()
+                rotate_uorange()
                 rotate_white()
-                rotate_orange()
-                rotate_orange()
-                rotate_orange()
-                rotate_white()
-                rotate_white()
-                rotate_white()
+                rotate_uorange()
+                rotate_uwhite()
                 rotate_orange()
                 print('3,7;1,5')
                 continue
@@ -850,15 +647,9 @@ def solve():
                 rotate_white()
                 rotate_green()
                 rotate_orange()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_orange()
-                rotate_orange()
-                rotate_orange()
-                rotate_white()
-                rotate_white()
-                rotate_white()
+                rotate_ugreen()
+                rotate_uorange()
+                rotate_uwhite()
                 continue
 
             elif (the_cube.grid[10][3].status == 'g' and the_cube.grid[11][4].status != 'g' and
@@ -866,15 +657,9 @@ def solve():
                 rotate_white()
                 rotate_orange()
                 rotate_green()
-                rotate_orange()
-                rotate_orange()
-                rotate_orange()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_white()
-                rotate_white()
-                rotate_white()
+                rotate_uorange()
+                rotate_ugreen()
+                rotate_uwhite()
                 continue
 
             elif (the_cube.grid[10][3].status != 'g' and the_cube.grid[11][4].status == 'g' and
@@ -882,15 +667,9 @@ def solve():
                 rotate_orange()
                 rotate_yellow()
                 rotate_green()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_orange()
-                rotate_orange()
-                rotate_orange()
+                rotate_uyellow()
+                rotate_ugreen()
+                rotate_uorange()
                 continue
 
             elif (the_cube.grid[10][3].status == 'g' and the_cube.grid[11][4].status == 'g' and
@@ -898,15 +677,9 @@ def solve():
                 rotate_orange()
                 rotate_green()
                 rotate_yellow()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_orange()
-                rotate_orange()
-                rotate_orange()
+                rotate_ugreen()
+                rotate_uyellow()
+                rotate_uorange()
                 continue
 
             elif (the_cube.grid[10][3].status != 'g' and the_cube.grid[11][4].status == 'g' and
@@ -914,15 +687,9 @@ def solve():
                 rotate_yellow()
                 rotate_green()
                 rotate_red()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_red()
-                rotate_red()
-                rotate_red()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_yellow()
+                rotate_ugreen()
+                rotate_ured()
+                rotate_uyellow()
                 continue
 
             elif (the_cube.grid[10][3].status != 'g' and the_cube.grid[11][4].status != 'g' and
@@ -930,30 +697,18 @@ def solve():
                 rotate_red()
                 rotate_green()
                 rotate_white()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_white()
-                rotate_white()
-                rotate_white()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ugreen()
+                rotate_uwhite()
+                rotate_ured()
                 continue
 
             else:
                 rotate_red()
                 rotate_green()
                 rotate_white()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_white()
-                rotate_white()
-                rotate_white()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ugreen()
+                rotate_uwhite()
+                rotate_ured()
 
         pygame.time.delay(step_pause)
 
@@ -978,27 +733,17 @@ def solve():
 
             elif (the_cube.grid[9][3].status != 'g' and the_cube.grid[9][5].status != 'g' and
                     the_cube.grid[11][3].status != 'g' and the_cube.grid[11][5].status == 'g'):
-                rotate_green()
-                rotate_green()
-                rotate_green()
+                rotate_ugreen()
                 continue
 
             elif (the_cube.grid[9][3].status != 'g' and the_cube.grid[9][5].status == 'g' and
                   the_cube.grid[11][3].status != 'g' and the_cube.grid[11][5].status != 'g' and
                   the_cube.grid[3][8].status == 'g'):
+                rotate_uwhite()
+                rotate_ugreen()
                 rotate_white()
-                rotate_white()
-                rotate_white()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_white()
-                rotate_green()
-                rotate_green()
-                rotate_green()
-                rotate_white()
-                rotate_white()
-                rotate_white()
+                rotate_ugreen()
+                rotate_uwhite()
                 rotate_green()
                 rotate_green()
                 rotate_white()
@@ -1012,16 +757,12 @@ def solve():
             else:
                 rotate_red()
                 rotate_green()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ured()
                 rotate_green()
                 rotate_red()
                 rotate_green()
                 rotate_green()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ured()
 
         pygame.time.delay(step_pause)
 
@@ -1036,22 +777,14 @@ def solve():
             if (the_cube.grid[0][3].status == the_cube.grid[0][5].status and
                     the_cube.grid[8][3].status != the_cube.grid[8][5].status):
                 print('corner swap')
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ured()
                 rotate_yellow()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ured()
                 rotate_white()
                 rotate_white()
                 rotate_red()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_uyellow()
+                rotate_ured()
                 rotate_white()
                 rotate_white()
                 rotate_red()
@@ -1064,22 +797,14 @@ def solve():
 
             else:
                 print('else corner swap')
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ured()
                 rotate_yellow()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ured()
                 rotate_white()
                 rotate_white()
                 rotate_red()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_yellow()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_uyellow()
+                rotate_ured()
                 rotate_white()
                 rotate_white()
                 rotate_red()
@@ -1107,16 +832,12 @@ def solve():
                 rotate_yellow()
                 rotate_yellow()
                 rotate_green()
-                rotate_red()
-                rotate_red()
-                rotate_red()
+                rotate_ured()
                 rotate_orange()
                 rotate_yellow()
                 rotate_yellow()
                 rotate_red()
-                rotate_orange()
-                rotate_orange()
-                rotate_orange()
+                rotate_uorange()
                 rotate_green()
                 rotate_yellow()
                 rotate_yellow()
@@ -1140,52 +861,28 @@ def scramble():
 
         if move == 0:
             rotate_green()
-            # print("b")
         elif move == 1:
             rotate_yellow()
-            # print('d')
         elif move == 2:
             rotate_blue()
-            # print('f')
         elif move == 3:
             rotate_red()
-            # print('left')
         elif move == 4:
             rotate_orange()
-            # print('r')
         elif move == 5:
             rotate_white()
-            # print('u')
         elif move == 6:
-            # print("b3")
-            rotate_green()
-            rotate_green()
-            rotate_green()
+            rotate_ugreen()
         elif move == 7:
-            # print('d3')
-            rotate_yellow()
-            rotate_yellow()
-            rotate_yellow()
+            rotate_uyellow()
         elif move == 8:
-            #  print('f3')
-            rotate_blue()
-            rotate_blue()
-            rotate_blue()
+            rotate_ublue()
         elif move == 9:
-            #  print('l3')
-            rotate_red()
-            rotate_red()
-            rotate_red()
+            rotate_ured()
         elif move == 10:
-            #  print('r3')
-            rotate_orange()
-            rotate_orange()
-            rotate_orange()
+            rotate_uorange()
         else:
-            #  print('u3')
-            rotate_white()
-            rotate_white()
-            rotate_white()
+            rotate_uwhite()
 
 
 def rotate_white(): #white
@@ -1231,20 +928,20 @@ def rotate_uwhite(): #uwhite
               the_cube.grid[2][3].status, the_cube.grid[1][3].status]
     status = status[2:] + status[0:2]
 
-    the_cube.grid[0][3].status, the_cube.grid[0][4].status, the_cube.grid[0][5].status, the_cube.grid[1][5].status, \
-    the_cube.grid[2][5].status, the_cube.grid[2][4].status, the_cube.grid[2][3].status, the_cube.grid[1][3].status \
-        = status
+    the_cube.grid[0][3].status, the_cube.grid[0][4].status, the_cube.grid[0][5].status, \
+    the_cube.grid[1][5].status, the_cube.grid[2][5].status, the_cube.grid[2][4].status, \
+    the_cube.grid[2][3].status, the_cube.grid[1][3].status = status
 
     status = [the_cube.grid[11][5].status, the_cube.grid[11][4].status, the_cube.grid[11][3].status,
-              the_cube.grid[3][8].status, the_cube.grid[3][7].status, the_cube.grid[3][6].status,
+              the_cube.grid[3][6].status, the_cube.grid[3][7].status, the_cube.grid[3][8].status,
               the_cube.grid[3][3].status, the_cube.grid[3][4].status, the_cube.grid[3][5].status,
               the_cube.grid[3][0].status, the_cube.grid[3][1].status, the_cube.grid[3][2].status]
     status = status[3:] + status[0:3]
 
-    the_cube.grid[11][5].status, the_cube.grid[11][4].status, the_cube.grid[11][3].status, the_cube.grid[3][8].status, \
-    the_cube.grid[3][7].status, the_cube.grid[3][6].status, the_cube.grid[3][3].status, the_cube.grid[3][4].status, \
-    the_cube.grid[3][5].status, the_cube.grid[3][0].status, the_cube.grid[3][1].status, the_cube.grid[3][2].status \
-        = status
+    the_cube.grid[11][5].status, the_cube.grid[11][4].status, the_cube.grid[11][3].status, \
+    the_cube.grid[3][6].status, the_cube.grid[3][7].status, the_cube.grid[3][8].status, \
+    the_cube.grid[3][3].status, the_cube.grid[3][4].status, the_cube.grid[3][5].status, \
+    the_cube.grid[3][0].status, the_cube.grid[3][1].status, the_cube.grid[3][2].status = status
 
     cube_updater()
     pass
@@ -1411,26 +1108,26 @@ def rotate_orange():  # orange
 
 
 def rotate_uorange():
-    status = [the_cube.grid[3][0].status, the_cube.grid[3][1].status, the_cube.grid[3][2].status,
-              the_cube.grid[4][2].status, the_cube.grid[5][2].status, the_cube.grid[5][1].status,
-              the_cube.grid[5][0].status, the_cube.grid[4][0].status]
+    status = [the_cube.grid[3][6].status, the_cube.grid[3][7].status, the_cube.grid[3][8].status,
+              the_cube.grid[4][8].status, the_cube.grid[5][8].status, the_cube.grid[5][7].status,
+              the_cube.grid[5][6].status, the_cube.grid[4][6].status]
     status = status[2:] + status[0:2]
 
-    the_cube.grid[3][0].status, the_cube.grid[3][1].status, the_cube.grid[3][2].status, \
-    the_cube.grid[4][2].status, the_cube.grid[5][2].status, the_cube.grid[5][1].status, \
-    the_cube.grid[5][0].status, the_cube.grid[4][0].status = status
+    the_cube.grid[3][6].status, the_cube.grid[3][7].status, the_cube.grid[3][8].status, \
+    the_cube.grid[4][8].status, the_cube.grid[5][8].status, the_cube.grid[5][7].status, \
+    the_cube.grid[5][6].status, the_cube.grid[4][6].status = status
 
-    status = [the_cube.grid[2][3].status, the_cube.grid[1][3].status, the_cube.grid[0][3].status,
-              the_cube.grid[5][3].status, the_cube.grid[4][3].status, the_cube.grid[3][3].status,
-              the_cube.grid[8][3].status, the_cube.grid[7][3].status, the_cube.grid[6][3].status,
-              the_cube.grid[11][3].status, the_cube.grid[10][3].status, the_cube.grid[9][3].status]
+    status = [the_cube.grid[0][5].status, the_cube.grid[1][5].status, the_cube.grid[2][5].status,
+              the_cube.grid[9][5].status, the_cube.grid[10][5].status, the_cube.grid[11][5].status,
+              the_cube.grid[6][5].status, the_cube.grid[7][5].status, the_cube.grid[8][5].status,
+              the_cube.grid[3][5].status, the_cube.grid[4][5].status, the_cube.grid[5][5].status]
 
     status = status[3:] + status[0:3]
 
-    the_cube.grid[2][3].status, the_cube.grid[1][3].status, the_cube.grid[0][3].status, \
-    the_cube.grid[5][3].status, the_cube.grid[4][3].status, the_cube.grid[3][3].status, \
-    the_cube.grid[8][3].status, the_cube.grid[7][3].status, the_cube.grid[6][3].status, \
-    the_cube.grid[11][3].status, the_cube.grid[10][3].status, the_cube.grid[9][3].status = status
+    the_cube.grid[0][5].status, the_cube.grid[1][5].status, the_cube.grid[2][5].status, \
+    the_cube.grid[9][5].status, the_cube.grid[10][5].status, the_cube.grid[11][5].status, \
+    the_cube.grid[6][5].status, the_cube.grid[7][5].status, the_cube.grid[8][5].status, \
+    the_cube.grid[3][5].status, the_cube.grid[4][5].status, the_cube.grid[5][5].status = status
 
     cube_updater()
     pass
@@ -1581,7 +1278,7 @@ while not done:
             if event.key == pygame.K_l:
                 rotate_ured()
             if event.key == pygame.K_r:
-                rotate_orange()
+                rotate_uorange()
             if event.key == pygame.K_f:
                 rotate_ublue()
             if event.key == pygame.K_b:
