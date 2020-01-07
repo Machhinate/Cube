@@ -24,13 +24,13 @@ class Cube:
         for row in range(self.rows):
             self.grid.append([])
             for column in range(self.columns):
-                newcubie = Cubie(cubegrid[row][column])
-                self.grid[row].append(newcubie)
+                new_cubie = Cubie(cubegrid[row][column])
+                self.grid[row].append(new_cubie)
              
-    def reset(self, mazegrid):
+    def reset(self, cube_grid):
         for row in range(self.rows):
             for column in range(self.columns):
-                self.grid[row][column] = Cubie(mazegrid[row][column])
+                self.grid[row][column] = Cubie(cube_grid[row][column])
 
     def display_cube(self, screen):
         for row in range(self.rows):
@@ -53,42 +53,42 @@ class Cube:
     def draw_plain_square(self, screen, i, j):
         rows = self.rows
         columns = self.columns
-        pygame.draw.rect(screen,black,[j * (300 / columns), i * (400 / rows),
-                                       (300 / columns), (400 / rows)])
+        pygame.draw.rect(screen, black, [j * (300 / columns), i * (400 / rows),
+                                         (300 / columns), (400 / rows)])
         
     def draw_orange(self, screen, i, j):
         rows = self.rows
         columns = self.columns
-        pygame.draw.rect(screen,orange,[j * (300 / columns), i * (400 / rows),
-                                       (300 / columns), (400 / rows)])
+        pygame.draw.rect(screen, orange, [j * (300 / columns), i * (400 / rows),
+                                          (300 / columns), (400 / rows)])
        
     def draw_green(self, screen, i, j):
         rows = self.rows
         columns = self.columns
-        pygame.draw.rect(screen,green,[j * (300 / columns), i * (400 / rows),
-                                       (300 / columns), (400 / rows)])
+        pygame.draw.rect(screen, green, [j * (300 / columns), i * (400 / rows),
+                                         (300 / columns), (400 / rows)])
      
     def draw_yellow(self, screen, i, j):
         rows = self.rows
         columns = self.columns
-        pygame.draw.rect(screen,yellow,[j * (300 / columns), i * (400 / rows),
-                                       (300 / columns), (400 / rows)])
+        pygame.draw.rect(screen, yellow, [j * (300 / columns), i * (400 / rows),
+                                          (300 / columns), (400 / rows)])
 
     def draw_blue(self, screen, i, j):
         rows = self.rows
         columns = self.columns
-        pygame.draw.rect(screen,blue,[j * (300 / columns), i * (400 / rows),
-                                       (300 / columns), (400 / rows)])
+        pygame.draw.rect(screen, blue, [j * (300 / columns), i * (400 / rows),
+                                        (300 / columns), (400 / rows)])
 
     def draw_red(self, screen, i, j):
         rows = self.rows
         columns = self.columns
-        pygame.draw.rect(screen,red,[j * (300 / columns), i * (400 / rows),
+        pygame.draw.rect(screen, red, [j * (300 / columns), i * (400 / rows),
                                        (300 / columns), (400 / rows)])
     
-    def draw_white(self,screen, i, j):
+    def draw_white(self, screen, i, j):
         rows = self.rows
         columns = self.columns
-        pygame.draw.rect(screen,white,[j * (300 / columns), i * (400 / rows),
-                                       (300 / columns), (400 / rows)])
+        pygame.draw.rect(screen, white, [j * (300 / columns), i * (400 / rows),
+                                         (300 / columns), (400 / rows)])
 
