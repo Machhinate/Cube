@@ -17,7 +17,7 @@ step_pause = 0
 # Set title of screen
 pygame.display.set_caption("cube")
 
-cubemap = [['0', '0', '0', 'w', 'w', 'w', '0', '0', '0'],
+cube_map = [['0', '0', '0', 'w', 'w', 'w', '0', '0', '0'],
            ['0', '0', '0', 'w', 'w', 'w', '0', '0', '0'],
            ['0', '0', '0', 'w', 'w', 'w', '0', '0', '0'],
            ['r', 'r', 'r', 'b', 'b', 'b', 'o', 'o', 'o'],
@@ -30,7 +30,7 @@ cubemap = [['0', '0', '0', 'w', 'w', 'w', '0', '0', '0'],
            ['0', '0', '0', 'g', 'g', 'g', '0', '0', '0'],
            ['0', '0', '0', 'g', 'g', 'g', '0', '0', '0']]
 
-the_cube = cubeclass.Cube(cubemap)
+the_cube = cubeclass.Cube(cube_map)
 
 
 def cube_updater():
@@ -1270,7 +1270,7 @@ while not done:
             done = True  # Flag that we are done so we exit this loop
         if event.type == pygame.KEYDOWN:  # If user wants to perform an action
             if event.key == pygame.K_p:
-                the_cube.reset(cubemap)
+                the_cube.reset(cube_map)
             if event.key == pygame.K_u:
                 rotate_uwhite()
             if event.key == pygame.K_d:
