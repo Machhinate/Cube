@@ -9,7 +9,7 @@ pygame.init()
 # Set the height and width of the screen
 size = [300, 500]
 screen = pygame.display.set_mode(size)
-pause = 0
+pause = 20
 step_pause = 0
 
 # Set title of screen
@@ -1267,19 +1267,19 @@ while not done:
         if event.type == pygame.QUIT:  # If user clicked close
             done = True  # Flag that we are done so we exit this loop
         if event.type == pygame.KEYDOWN:  # If user wants to perform an action
-            if event.key == pygame.K_p:
+            if event.key == pygame.K_w:
                 the_cube.reset(cube_map)
-            if event.key == pygame.K_u:
+            if event.key == pygame.K_t:
                 rotate_uwhite()
-            if event.key == pygame.K_d:
+            if event.key == pygame.K_g:
                 rotate_uyellow()
-            if event.key == pygame.K_l:
-                rotate_ured()
             if event.key == pygame.K_r:
+                rotate_ured()
+            if event.key == pygame.K_y:
                 rotate_uorange()
             if event.key == pygame.K_f:
                 rotate_ublue()
-            if event.key == pygame.K_b:
+            if event.key == pygame.K_h:
                 rotate_ugreen()
             if event.key == pygame.K_s:
                 scramble()
