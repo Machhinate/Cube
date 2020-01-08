@@ -15,6 +15,7 @@ step_pause = 0
 # Set title of screen
 pygame.display.set_caption("cube")
 
+# map of cube colours
 cube_map = [['0', '0', '0', 'w', 'w', 'w', '0', '0', '0'],
             ['0', '0', '0', 'w', 'w', 'w', '0', '0', '0'],
             ['0', '0', '0', 'w', 'w', 'w', '0', '0', '0'],
@@ -31,6 +32,7 @@ cube_map = [['0', '0', '0', 'w', 'w', 'w', '0', '0', '0'],
 C1 = cubeclass.Cube(cube_map)
 
 
+# updates display
 def cube_updater():
     pygame.time.delay(pause)
     C1.display_cube(screen)
@@ -39,8 +41,9 @@ def cube_updater():
     pass
 
 
+# series of algorithms to solve a cube
 def solve():
-    # variable for each stage of solving
+    # variable markers for each stage of solving
     cross = False
     cross_edges = False
     first_layer = False
@@ -50,77 +53,64 @@ def solve():
     corners = False
     top_layer = False
     solved = False
-
+    # loop for solving
     while not solved:
 
         while not cross:
-
             if C1.grid[0][4].status == 'b':
                 rotate_white()
                 rotate_blue()
                 rotate_u_orange()
-
             if C1.grid[1][3].status == 'b':
                 rotate_white()
                 rotate_white()
                 rotate_blue()
                 rotate_orange()
-
             if C1.grid[1][5].status == 'b':
                 rotate_blue()
                 rotate_u_orange()
-
             if C1.grid[2][4].status == 'b':
                 rotate_u_white()
                 rotate_blue()
                 rotate_orange()
-
             if C1.grid[3][1].status == 'b':
                 rotate_u_white()
                 rotate_blue()
-
             if C1.grid[3][7].status == 'b':
                 rotate_white()
                 rotate_blue()
-
             if C1.grid[4][0].status == 'b':
                 rotate_u_blue()
                 rotate_red()
                 rotate_blue()
                 rotate_u_white()
                 rotate_blue()
-
             if C1.grid[4][2].status == 'b':
                 rotate_u_blue()
                 rotate_u_red()
                 rotate_blue()
                 rotate_u_white()
                 rotate_blue()
-
             if C1.grid[4][6].status == 'b':
                 rotate_orange()
                 rotate_white()
                 rotate_blue()
-
             if C1.grid[4][8].status == 'b':
                 rotate_blue()
                 rotate_orange()
                 rotate_blue()
                 rotate_u_yellow()
                 rotate_u_blue()
-
             if C1.grid[5][1].status == 'b':
                 rotate_blue()
                 rotate_blue()
                 rotate_yellow()
                 rotate_u_blue()
-
             if C1.grid[5][7].status == 'b':
                 rotate_blue()
                 rotate_blue()
                 rotate_u_yellow()
                 rotate_u_blue()
-
             if C1.grid[6][4].status == 'b':
                 rotate_blue()
                 rotate_blue()
@@ -129,13 +119,11 @@ def solve():
                 rotate_u_red()
                 rotate_blue()
                 rotate_blue()
-
             if C1.grid[7][3].status == 'b':
                 rotate_u_blue()
                 rotate_u_red()
                 rotate_blue()
                 rotate_blue()
-
             if C1.grid[7][5].status == 'b':
                 rotate_blue()
                 rotate_blue()
@@ -145,7 +133,6 @@ def solve():
                 rotate_u_red()
                 rotate_blue()
                 rotate_blue()
-
             if C1.grid[8][4].status == 'b':
                 rotate_blue()
                 rotate_blue()
@@ -154,31 +141,27 @@ def solve():
                 rotate_u_red()
                 rotate_blue()
                 rotate_blue()
-
             if C1.grid[9][4].status == 'b':
                 rotate_green()
                 rotate_green()
                 rotate_white()
                 rotate_white()
                 rotate_blue()
-
             if C1.grid[10][3].status == 'b':
                 rotate_ugreen()
                 rotate_white()
                 rotate_white()
                 rotate_blue()
-
             if C1.grid[10][5].status == 'b':
                 rotate_green()
                 rotate_white()
                 rotate_white()
                 rotate_blue()
-
             if C1.grid[11][4].status == 'b':
                 rotate_white()
                 rotate_white()
                 rotate_blue()
-
+            # checks blue cross
             if (C1.grid[3][4].status == 'b' and C1.grid[4][3].status == 'b' and
                     C1.grid[4][5].status == 'b' and C1.grid[5][4].status == 'b'):
                 print('cross')
